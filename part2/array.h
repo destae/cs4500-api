@@ -24,20 +24,22 @@ class Array : public Object{
 	}
 
 	// Removes the element at given index
+	// sets the item at the index to a nullptr
+	// only valid if 0 <= index <= length - 1
   	virtual void remove(size_t index) {
 	}
 
 	// inserts given object at given index
+	// only valid if 0 <= index <= length - 1
 	virtual void insert(void* to_add, size_t index) {
 	}
 
-	// returns len_ value
+	// returns len_ value; the length of the array
 	size_t len() {
 	}
 
 	// returns pointer to object at given index
 	virtual void* get(size_t index) {
-
 	}
 
 	// returns true if array is empty, false if it not
@@ -53,7 +55,8 @@ class Array : public Object{
 	void print() {
 	}
 
-	// append given object to the array if there is space
+	// inserts an item after the last index currently occupied by an item (not nullptr)
+	// doubles the size of the array if an item occupies the length-1 index
 	virtual void append(void* to_add) {
 	}
 };
