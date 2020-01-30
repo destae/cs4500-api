@@ -3,6 +3,7 @@
 #include "String.h"  // Your file with the String class
 #include <ctype.h>
 #include "Array.h"
+#include <bool.h>
 
 
 void FAIL() {
@@ -41,9 +42,9 @@ void test1() {
 	printf("1\n");
 	}
 
-// test our array class
+// test our StringArray class
 void test2() {
-	Array* a1 = new Array(2);
+	StringArray* a1 = new StringArray(2);
 	t_true(a1->length() == 2);
 
 	// test insert and count
@@ -69,9 +70,96 @@ void test2() {
 
 }
 
+// test our IntArray class
+void test3() {
+	IntArray* a1 = new IntArray(2);
+	t_true(a1->length() == 2);
+
+	// test insert and count
+	a1->insert(new int(10), 0);
+	a1->insert(new int(10), 1);
+	t_true(a1->get(0)->equals(a1->get(1)));
+	t_true(a1->count() == 2);
+	t_true(a1->length() == 4); // when reaching max capacity, resize the array
+
+
+	// testing dynamic add
+	a1->insert(new int(20), 2);
+	t_true(a1->count() == 3);
+
+
+	a1->remove(0);
+	t_true(a1->count() == 2);
+	t_true(a1->get(0) == nullptr);
+	a1->insert(new int(100), 0);
+	t_false(a1->get(0)->equals(a1->get(1)));
+
+	printf("3\n");
+
+}
+
+// test our BoolArray class
+void test4() {
+	BoolArray* a1 = new BoolArray(2);
+	t_true(a1->length() == 2);
+
+	// test insert and count
+	a1->insert(new bool(true), 0);
+	a1->insert(new bool(true), 1);
+	t_true(a1->get(0)->equals(a1->get(1)));
+	t_true(a1->count() == 2);
+	t_true(a1->length() == 4); // when reaching max capacity, resize the array
+
+
+	// testing dynamic add
+	a1->insert(new bool(true), 2);
+	t_true(a1->count() == 3);
+
+
+	a1->remove(0);
+	t_true(a1->count() == 2);
+	t_true(a1->get(0) == nullptr);
+	a1->insert(new bool(false), 0);
+	t_false(a1->get(0)->equals(a1->get(1)));
+
+	printf("4\n");
+
+}
+
+// test our FloatArray class
+void test5() {
+	FloatArray* a1 = new FloatArray(2);
+	t_true(a1->length() == 2);
+
+	// test insert and count
+	a1->insert(new float(3.1), 0);
+	a1->insert(new float(3.1), 1);
+	t_true(a1->get(0)->equals(a1->get(1)));
+	t_true(a1->count() == 2);
+	t_true(a1->length() == 4); // when reaching max capacity, resize the array
+
+
+	// testing dynamic add
+	a1->insert(new float(3.1), 2);
+	t_true(a1->count() == 3);
+
+
+	a1->remove(0);
+	t_true(a1->count() == 2);
+	t_true(a1->get(0) == nullptr);
+	a1->insert(new float(1.2), 0);
+	t_false(a1->get(0)->equals(a1->get(1)));
+
+	printf("5\n");
+
+}
+
 int main() {
 	test1();
 	test2();
+	test3();
+	test4();
+	test5();
 
 	return 0;
 }
