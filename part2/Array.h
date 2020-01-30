@@ -22,11 +22,6 @@ class Array : public Object {
   void insert(void* obj, size_t index) {
 
   }
-    
-  // adds the given object to the end of the array 
-  void add(void* obj) {
-  
-  }
 
   // remove the item at the given index
   void remove(size_t index) {
