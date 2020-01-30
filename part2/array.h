@@ -38,10 +38,6 @@ class Array : public Object{
 	size_t len() {
 	}
 
-	// returns pointer to object at given index
-	virtual void* get(size_t index) {
-	}
-
 	// returns true if array is empty, false if it not
 	bool is_empty() {
 	}
