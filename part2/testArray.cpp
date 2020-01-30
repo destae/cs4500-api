@@ -78,7 +78,7 @@ void test3() {
 	// test insert and count
 	a1->insert(new int(10), 0);
 	a1->insert(new int(10), 1);
-	t_true(a1->get(0)->equals(a1->get(1)));
+	t_true(a1->get(0) == a1->get(1));
 	t_true(a1->count() == 2);
 	t_true(a1->length() == 4); // when reaching max capacity, resize the array
 
@@ -92,7 +92,7 @@ void test3() {
 	t_true(a1->count() == 2);
 	t_true(a1->get(0) == nullptr);
 	a1->insert(new int(100), 0);
-	t_false(a1->get(0)->equals(a1->get(1)));
+	t_false(a1->get(0) == a1->get(1));
 
 	printf("3\n");
 
@@ -106,7 +106,7 @@ void test4() {
 	// test insert and count
 	a1->insert(new bool(true), 0);
 	a1->insert(new bool(true), 1);
-	t_true(a1->get(0)->equals(a1->get(1)));
+	t_true(a1->get(0) == a1->get(1));
 	t_true(a1->count() == 2);
 	t_true(a1->length() == 4); // when reaching max capacity, resize the array
 
@@ -120,7 +120,7 @@ void test4() {
 	t_true(a1->count() == 2);
 	t_true(a1->get(0) == nullptr);
 	a1->insert(new bool(false), 0);
-	t_false(a1->get(0)->equals(a1->get(1)));
+	t_false(a1->get(0) == a1->get(1));
 
 	printf("4\n");
 
@@ -134,7 +134,7 @@ void test5() {
 	// test insert and count
 	a1->insert(new float(3.1), 0);
 	a1->insert(new float(3.1), 1);
-	t_true(a1->get(0)->equals(a1->get(1)));
+	t_true(a1->get(0) == a1->get(1));
 	t_true(a1->count() == 2);
 	t_true(a1->length() == 4); // when reaching max capacity, resize the array
 
@@ -148,7 +148,7 @@ void test5() {
 	t_true(a1->count() == 2);
 	t_true(a1->get(0) == nullptr);
 	a1->insert(new float(1.2), 0);
-	t_false(a1->get(0)->equals(a1->get(1)));
+	t_false(a1->get(0) == a1->get(1));
 
 	printf("5\n");
 
