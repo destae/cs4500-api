@@ -51,11 +51,12 @@ void test2() {
 	a1->insert(new String("abc"), 1);
 	t_true(a1->get(0)->equals(a1->get(1)));
 	t_true(a1->count() == 2);
+	t_true(a1->length() == 4); // when reaching max capacity, resize the array
+
 
 	// testing dynamic add
-	a1->add(new String("123"));
+	a1->insert(new String("123"), 2);
 	t_true(a1->count() == 3);
-	t_true(a1->length() == 4); // when adding over max capacity, double size of array and copy over
 
 
 	a1->remove(0);
