@@ -50,11 +50,6 @@ class Array : public Object{
 	// prints entire array
 	void print() {
 	}
-
-	// inserts an item after the last index currently occupied by an item (not nullptr)
-	// doubles the size of the array if an item occupies the length-1 index
-	virtual void append(void* to_add) {
-	}
 };
 
 
@@ -84,6 +79,7 @@ class IntArray : public Array{
 	}
 
 	// append given object to the array if there is space
+	// doubles the size of the array if an item occupies the length-1 index
 	void append(int* to_add) {
 	}
 };
@@ -113,6 +109,7 @@ class BoolArray : public Array{
 	}
 
 	// append given object to the array if there is space
+	// doubles the size of the array if an item occupies the length-1 index
 	void append(bool* to_add) {
 	}
 };
@@ -142,6 +139,7 @@ class FloatArray : public Array{
 	}
 
 	// append given object to the array if there is space
+	// doubles the size of the array if an item occupies the length-1 index
 	void append(float* to_add) {
 	}
 };
@@ -171,6 +169,7 @@ class StringArray : public Array{
 	}
 
 	// append given object to the array if there is space
+	// doubles the size of the array if an item occupies the length-1 index
 	void append(String* to_add) {
 	}
 };
