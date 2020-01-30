@@ -62,7 +62,6 @@ void test2() {
 
 	a1->remove(0);
 	t_true(a1->count() == 2);
-	t_true(a1->get(0) == nullptr);
 	a1->insert(new String("cba"), 0);
 	t_false(a1->get(0)->equals(a1->get(1)));
 
@@ -90,7 +89,6 @@ void test3() {
 
 	a1->remove(0);
 	t_true(a1->count() == 2);
-	t_true(a1->get(0) == nullptr);
 	a1->insert(new int(100), 0);
 	t_false(a1->get(0) == a1->get(1));
 
@@ -118,7 +116,6 @@ void test4() {
 
 	a1->remove(0);
 	t_true(a1->count() == 2);
-	t_true(a1->get(0) == nullptr);
 	a1->insert(new bool(false), 0);
 	t_false(a1->get(0) == a1->get(1));
 
@@ -146,7 +143,6 @@ void test5() {
 
 	a1->remove(0);
 	t_true(a1->count() == 2);
-	t_true(a1->get(0) == nullptr);
 	a1->insert(new float(1.2), 0);
 	t_false(a1->get(0) == a1->get(1));
 
