@@ -29,11 +29,6 @@ class Array : public Object{
   	virtual void remove(size_t index) {
 	}
 
-	// inserts given object at given index
-	// only valid if 0 <= index <= length - 1
-	virtual void insert(void* to_add, size_t index) {
-	}
-
 	// returns len_ value; the length of the array
 	size_t len() {
 	}
@@ -67,6 +62,7 @@ class IntArray : public Array{
 	}
 
 	// inserts given object at given index
+	// only valid if 0 <= index <= length - 1
 	void insert(int* to_add, size_t index) {
 	}
 
@@ -97,6 +93,7 @@ class BoolArray : public Array{
 
 
 	// inserts given object at given index
+	// only valid if 0 <= index <= length - 1
 	void insert(bool* to_add, size_t index) {
 	}
 
@@ -127,6 +124,7 @@ class FloatArray : public Array{
 	}
 
 	// inserts given object at given index
+	// only valid if 0 <= index <= length - 1
 	void insert(float* to_add, size_t index) {
 	}
 
@@ -157,6 +155,7 @@ class StringArray : public Array{
 	}
 
 	// inserts given object at given index
+	// only valid if 0 <= index <= length - 1
 	void insert(String* to_add, size_t index) {
 	}
 
