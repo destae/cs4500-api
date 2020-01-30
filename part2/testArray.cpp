@@ -1,8 +1,8 @@
 #include "helper.h"  // Your file, with any C++ code that you need
-#include "Object.h"  // Your file with the CwC declaration of Object
-#include "String.h"  // Your file with the String class
+#include "object.h"  // Your file with the CwC declaration of Object
+#include "string.h"  // Your file with the String class
 #include <ctype.h>
-#include "Array.h"
+#include "array.h"
 #include <bool.h>
 
 
@@ -20,7 +20,7 @@ void test1() {
 	String* s1 = new String("abc");
 	String* s2 = new String("abc");
 	t_true(s1->equals(s2));
-	t_false(s1->hash() == s2->hash())
+	t_false(s1->hash() == s2->hash());
 
 	String* s3 = new String("wow");
 	t_false(s1->equals(s3));
