@@ -69,7 +69,7 @@ void test2() {
 
 }
 
-main() {
+int main() {
 	test1();
 	test2();
 
