@@ -4,8 +4,7 @@
 
 class Array : public Object {
     public:
-        void** data; // when implementing stringArray subclass, useful to use Object** instead
-        size_t length_;
+        
 
     // Constructor
   Array(size_t len) {
